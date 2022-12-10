@@ -1,0 +1,5 @@
+set(BK_GLEW_VERSION "2.2.0")
+function(link_glew target MOD)
+    target_link_libraries(${target} ${MOD} ${PROJECT_SOURCE_DIR}/thirdparty/glew/lib/libglew-shared.so.2.2.0)
+    target_include_directories(${target} SYSTEM ${MOD} ${PROJECT_SOURCE_DIR}/thirdparty/glew/include)
+endfunction()
